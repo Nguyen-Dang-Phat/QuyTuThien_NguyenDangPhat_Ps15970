@@ -1388,13 +1388,12 @@
 			<!-- End Navbar -->
 			<div class="page-header clear-filter" filter-color="orange">
 				<div class="page-header-image"
-					style="background-image:url('https://previews.123rf.com/images/verlen4418/verlen44181502/verlen4418150200066/36985332-vintage-fashion-background-letters-words-and-stylish-girl.jpg')">
+					style="background-image: url(/images/back.jpg);">
 				</div>
 				<div class="content">
 					<div class="container">
 						<div class="col-md-4 ml-auto mr-auto">
-							<div class="card card-login card-plain">
-							
+							<div class="card card-login card-plain">			
 								<form class="form" action="/account/login" method="post">
 									<h1>LOGIN</h1>				
 									<div class="card-body">

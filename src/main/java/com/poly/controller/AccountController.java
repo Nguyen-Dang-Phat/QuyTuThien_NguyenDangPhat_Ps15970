@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -55,10 +56,20 @@ public class AccountController {
 		return "account/login";
 	}
 	
-	@GetMapping("/logout")
-	public String logout(Model model) {
-		session.set("username",null);
-		return "home/index"; // view len trang login 
+	// xét quyền truy cập để hiển thị lại hệ thống menu
+	@GetMapping("/logout/{username}")
+	public String logout(Model model, @PathVariable ("username") String username) {
+		Account ac = dao.getOne(username);
+		if(ac.isAdmin()) {
+			session.set("username", ac.getUsername());
+			model.addAttribute("message", "Login successfylly");
+			return "redirect:/category/index";
+		}
+		else {
+			session.set("username", ac.getUsername());
+			model.addAttribute("message", "Login successfylly");
+			return "redirect:/home/index";
+		}
 	}
 
 }

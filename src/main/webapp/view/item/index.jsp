@@ -10,8 +10,6 @@
 </head>
 <body>
 
-
-
 <ul>
 <c:forEach var="item" items="${items}">
 	<li>
@@ -20,6 +18,5 @@
 	</li>
 </c:forEach>
 </ul>
-
 </body>
 </html>

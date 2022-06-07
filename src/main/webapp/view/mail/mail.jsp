@@ -86,13 +86,13 @@
                                 <div class="form-group">
                                     <label class="control-label col-sm-2" for="fname">From:</label>
                                     <div class="col-sm-10">
-                                        <form:input  class="form-control" path="from" value="khanhhuynhnk@gmail.com" />
+                                        <form:input  class="form-control" path="from" value="lebaodangtv@gmail.com" />
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label col-sm-2" for="lname">To:</label>
                                     <div class="col-sm-10">
-                                        <form:input  class="form-control" path="to" value="khanhhuynhnk@gmail.com" />
+                                        <form:input  class="form-control" path="to" value="lebaodangtv@gmail.com" />
                                     </div>
                                 </div>
                                 <div class="form-group">

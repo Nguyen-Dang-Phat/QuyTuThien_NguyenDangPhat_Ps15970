@@ -6,6 +6,9 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -70,14 +73,15 @@ public class ShoppingCartController {
 		return "redirect:/cart/view";
 	}
 
+	// xem chi tiết
 	@RequestMapping("/cart/chitiet/{id}")
-	public String chitiet(@PathVariable("id") Integer id, Model model) {
-		String idd = String.valueOf(id);
-		List<Product> list = productDao.findByCategoryId(idd);
-		System.out.print(list);
-		model.addAttribute("items", list);
+	public String chitiet(@PathVariable("id") Integer id,
+			 Model model) {
+		List<Product> PR = productDao.product(id);
+		model.addAttribute("items",PR);
 		return "/home/xemchitiet";
 	}
+	
 
 	@RequestMapping("/cart/checkout")
 	public String checkout() {

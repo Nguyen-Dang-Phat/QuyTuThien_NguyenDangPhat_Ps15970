@@ -1,16 +1,18 @@
 <%@ page pageEncoding="utf-8" %>
 	<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-
-		<form:form action="/editac/index" modelAttribute="item">
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+		<form:form action="/editac/index" modelAttribute="item" enctype="multipart/form-data">
 			<div class="card">
 				<div class="card-body">
-
 					<div class="row">
 						<div class="col-3">
 							<div class="p-3">
-								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnWTGzMQ0VuD5sEtoVaL2JPirHgT5M9YNBtQ&usqp=CAU"
-									alt="">
-
+								<img src="/webapp/images/${item.photo}"
+									alt="" style="width: 300px" height="400px" >
+									<div class="form-group">
+									<input type="file" name="photo" class="form-control-file"
+										id="image" onchange="chooseFile(this)" />
+								</div>
 							</div>
 						</div>
 						<div class="col-9">

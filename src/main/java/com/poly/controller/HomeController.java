@@ -30,18 +30,29 @@ public class HomeController {
 	ShoppingCartService cart; // 1. tiêm Spring Bean đã viết ở bài trước
 	@Autowired
 	MailerService mailer;
-	
-	
+
+	// nếu người dùng nhất search
 	@RequestMapping("/home/index")
-	public String index(Model model, 
-			@RequestParam("keywords") Optional<String> kw,
-			@RequestParam("p") Optional<Integer> p) {		
-		//tìm theo keywords
-		String kwords = kw.orElse(session.get("keywords",""));
+	public String index(Model model, @RequestParam("keywords") Optional<String> kw,
+			@RequestParam("p") Optional<Integer> p) {
+		// tìm theo keywords
+		String kwords = kw.orElse(session.get("keywords", ""));
 		session.set("keywords", kwords);
 		Pageable pageable = PageRequest.of(p.orElse(0), 8);
-		Page<Product> page = dao.findByKeywords("%"+kwords+"%", pageable);
-		model.addAttribute("page", page);	
+		Page<Product> page = dao.findByKeywords("%" + kwords + "%", pageable);
+		model.addAttribute("page", page);
 		return "home/index";
-	}	
+	}
+
+	// nếu phân theo loại hàng
+	@RequestMapping("//loaihang")
+	public String loaihang(Model model, @RequestParam("loaihang") Optional<String> lh,
+			@RequestParam("p") Optional<Integer> p) {
+		String lhh = lh.orElse(session.get("loaihang", ""));
+		session.set("loaihang", lhh);
+		Pageable pageable = PageRequest.of(p.orElse(0), 8);
+		Page<Product> page = dao.findByLoaiHang("%" + lhh + "%", pageable);
+		model.addAttribute("page", page);
+		return "/home/index";
+	}
 }

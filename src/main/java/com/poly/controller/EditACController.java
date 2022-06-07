@@ -1,20 +1,35 @@
 package com.poly.controller;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
+
+import javax.servlet.ServletContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.poly.dao.AccountDAO;
 import com.poly.entity.Account;
+import com.poly.service.ParamService;
+
 
 @Controller
 public class EditACController {
 @Autowired
 AccountDAO dao;
+@Autowired
+ParamService paramService;
+@Autowired
+ServletContext app;
 
 //hàm 1
 	@RequestMapping("/editac/index")
@@ -39,8 +54,14 @@ AccountDAO dao;
 
 	// hàm 3
 	@RequestMapping("/editac/create")
-	public String create(Account item) {
-		dao.save(item);
+	public String create(@ModelAttribute("item") Account ac, BindingResult result, Model
+			model ,@RequestParam("photo") MultipartFile multipartFile) throws IOException {
+		String filename = StringUtils.cleanPath(multipartFile.getOriginalFilename());
+		String uploadString = "/webapp/images";
+		ac.setPhoto(filename);
+		dao.save(ac);
+		paramService.save(multipartFile, uploadString);
+		model.addAttribute("item",new Account());
 		return "redirect:/editac/index";
 	}
 

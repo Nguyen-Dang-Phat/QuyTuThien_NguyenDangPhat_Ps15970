@@ -11,23 +11,7 @@ import org.springframework.data.jpa.repository.Query;
 import com.poly.entity.*;
 
 public interface ProductDAO extends JpaRepository<Product, Integer>{
-
-//	@Query("SELECT o FROM Product o WHERE o.price BETWEEN ?1 AND ?2")
-//	List<Product> findByPrice(double minPrice, double maxPrice);
-//	List<Product> findByPriceBetween(double minPrice, double maxPrice);
-
-//@Query("SELECT o FROM Product o WHERE o.name LIKE ?1")
-//Page<Product> findByKeywords(String keywords, Pageable pageable);
-
-	//Page<Product> findAllByNameLike(String keywords, Pageable pageable);
-
-//	@Query("SELECT new Report(o.category, sum(o.price), count(o)) "
-//			+ " FROM Product o "
-//			+ " GROUP BY o.category"
-//			+ " ORDER BY sum(o.price) DESC");
-	//List<Report> getInventoryByCategory();
-	
-	
+		
 	//lab6.1
 	@Query("SELECT o FROM Product o WHERE o.price BETWEEN ?1 AND ?2")
 	List<Product> findByPrice(double minPrice, double maxPrice);
@@ -37,6 +21,9 @@ public interface ProductDAO extends JpaRepository<Product, Integer>{
 	//lab6.2
 	@Query("SELECT o FROM Product o WHERE o.name LIKE ?1")
 	Page<Product> findByKeywords(String keywords, Pageable pageable);
+	
+	@Query("SELECT o FROM Product o WHERE o.loaihang LIKE ?1")
+	Page<Product> findByLoaiHang(String loaihang,Pageable pageable);
 
 	//lab6.5
 	Page<Product> findAllByNameLike(String keywords, Pageable pageable);
@@ -48,8 +35,14 @@ public interface ProductDAO extends JpaRepository<Product, Integer>{
 			+ " ORDER BY sum(o.price) DESC")
 	List<Report> getInventoryByCategory();
 	
-	@Query ("SELECT p FROM Product p WHERE p.category.id=?1")
-	List<Product> findByCategoryId(String categoryId);
+	// chi tiết sản phẩm
+	@Query("SELECT o FROM Product o WHERE o.id LIKE ?1")
+	List<Product> product(Integer id);
+	
+	// loại hàng
+	@Query("SELECT o FROM Product o WHERE o.loaihang LIKE ?1")
+	List<Product> productslh(String loaihang);
+	
 }
 
 
