@@ -32,11 +32,6 @@ ParamService paramService;
 @Autowired
 ServletContext app;
 
-	@RequestMapping("/createAccountt")
-	public String createe() {
-		return "/account/RegisterAccount";
-	}
-
 
 //hàm 1
 	@RequestMapping("/editac/index")
