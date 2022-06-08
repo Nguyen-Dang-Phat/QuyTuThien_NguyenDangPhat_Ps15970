@@ -107,7 +107,7 @@ public class AccountController {
 	}
 	
 	// sửa thông tin cá nhân
-		@RequestMapping("thongtincanhan")
+		@RequestMapping("thongtincanhann")
 		public String thongtincanhan( Model model ,
 				@RequestParam("username") String username, @RequestParam("password") String passsword,
 				@RequestParam("email") String email, @RequestParam("fullname") String fullname) throws IOException {
