@@ -11,6 +11,7 @@
     letter-spacing: 0.1em;
     padding: 10px 30px;
     transition: 0.5s;
+    margin-right: 5px;
 }
 #a:hover{
     letter-spacing: 0.20em;

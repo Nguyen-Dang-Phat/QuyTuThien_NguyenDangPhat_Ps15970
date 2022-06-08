@@ -3,7 +3,7 @@
 
 <table class="content-table col-12" style="text-align: center;">
 <thead>
-	<tr>
+	<tr class="active">
 		<th scope="col">Product ID</th>
 		<th scope="col">Product name</th>
 		<th scope="col">Product price</th>
@@ -14,15 +14,17 @@
 	</thead>
 	<tbody>
 	<c:forEach var="item" items="${items}">
-		<tr>
+		<tr class="active-row">
 			<td class="align-middle">${item.id}</td>
 			<td class="align-middle">${item.name}</td>
 			<td class="align-middle">${item.price}</td>
 			<td class="align-middle">${item.image}</td>
 			<td class="align-middle">${item.category.id}</td>
 			<td class="align-middle">
-				<a class="btn btn-warning btn-sm" href="/product/edit/${item.id}">Edit</a>
-				<a class="btn btn-danger btn-sm" href="/product/delete/${item.id}">Delete</a>
+				<a style="font-weight: bold;
+	color: #20B2AA;" class="btn btn-warning apro" href="/product/edit/${item.id}">Edit</a>
+				<a style="font-weight: bold;
+	color: #20B2AA;" class="btn btn-danger apro" href="/product/delete/${item.id}">Delete</a>
 			</td>
 		</tr>
 	</c:forEach>

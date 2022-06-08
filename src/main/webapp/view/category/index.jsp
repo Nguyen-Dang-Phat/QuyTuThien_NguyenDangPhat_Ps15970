@@ -38,20 +38,20 @@
 	})
 </script>
    <link rel="stylesheet" type="text/css" href="/css/table.css">
-             <link rel="stylesheet" type="text/css" href="/css/button.css">
+   <link rel="stylesheet" type="text/css" href="/css/button.css">
+   <link rel="stylesheet" type="text/css" href="/css/card.css">
 
-<link rel="stylesheet" type="text/css" href="css/button.css">
 <style>
-	*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
+
 	body{
-	min-height:100vh;
-		background-image: url(/images/backgroupadmin.jpg);
+		min-height:100vh;
 		background-size: cover;
-	background-position: center;
+		background-repeat:repeat;
 	}
 </style>
 </head>
@@ -61,7 +61,8 @@
 		<jsp:include page="_header.jsp" />
 		<section class="row">
 			<div class="col mt-4">
-				<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<ul style="font-size: 1.1em;
+    letter-spacing: 0.05em;" class="nav nav-tabs" id="myTab" role="tablist">
 					<li class="nav-item" role="presentation"><a
 						class="nav-link active" id="videoediting-tab" data-toggle="tab"
 						href="#videoediting" role="tab" aria-controls="videoediting"
@@ -70,7 +71,7 @@
 						id="videolist-tab" data-toggle="tab" href="#videolist" role="tab"
 						aria-controls="videolist" aria-selected="false">Category List</a></li>
 				</ul>
-				<div class="tab-content" id="myTabContent">
+				<div class="tab-content" id="myTabContent" style="margin-top: 1px">
 					<div class="tab-pane fade show active" id="videoediting"
 						role="tabpanel" aria-labelledby="videoediting-tab">
 

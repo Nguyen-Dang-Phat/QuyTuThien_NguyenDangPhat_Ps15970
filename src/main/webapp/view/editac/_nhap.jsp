@@ -47,10 +47,10 @@
 
 				</div>
 				<div class="card-footer text-muted text-center" style="background: #696969;">
-					<button id="a" style='--clr:#1e9bff' class="btn btn-primary" formaction="/editac/create"><span id="span">Create</span><i id="i"></i></button>
-					<button id="a"  style='--clr:#FFD700'  class="btn btn-warning" formaction="/editac/update"><span id="span">Update</span><i id="i"></i></button>
-					<button id="a"  style='--clr:#FF0000'  class="btn btn-danger" formaction="/editac/delete/${item.username}"><span id="span">Delete</span><i id="i"></i></button>
-					<button id="a"  style='--clr:#1e9bff'  class="btn btn-info" formaction="/editac/index"><span id="span">Reset</span><i id="i"></i></button>
+					<button id="a" style='--clr:#1e9bff' formaction="/editac/create"><span id="span">Create</span><i id="i"></i></button>
+					<button id="a"  style='--clr:#FFD700' formaction="/editac/update"><span id="span">Update</span><i id="i"></i></button>
+					<button id="a"  style='--clr:#FF0000' formaction="/editac/delete/${item.username}"><span id="span">Delete</span><i id="i"></i></button>
+					<button id="a"  style='--clr:#1e9bff' formaction="/editac/index"><span id="span">Reset</span><i id="i"></i></button>
 				</div>
 			</div>
 			</form>
