@@ -2,6 +2,75 @@
 	<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
 	<form:form action="/product/SaveOrUpdate" modelAttribute="item" method="post" enctype="multipart/form-data">
+			<form>
+			<style>
+#a{
+    position: relative;
+    background-color: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+#a:hover{
+    letter-spacing: 0.20em;
+    background-color: var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+}
+#a::before{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background-color: #27282c;
+}
+#a #span{
+    position: relative;
+    z-index: 1;
+}
+#a #i{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+#a #i::before{
+    content: '';
+    position: absolute;
+    top: -1.5px;
+    left: 80%;
+    width: 10px;
+    height: 5px;
+    border: 2px solid var(--clr);
+    background: #28282c;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+#a:hover #i::before{
+    width: 20px;
+    left: 20%;
+
+}
+#a #i::after{
+    content: '';
+    position: absolute;
+    bottom: -1.5px;
+    left: 20%;
+    width: 10px;
+    height: 5px;
+    border: 2px solid var(--clr);
+    transform: translateX(-50%);
+    background: #28282c;
+    transition: 0.5s;
+}
+#a:hover #i::after{
+    width: 20px;
+    left: 80%;
+    
+}
+</style>
 			<div class="card">
 				<div class="card-body">
 
@@ -38,9 +107,9 @@
 					</div>
 
 				</div>
-				<div class="card-footer text-muted">
-					<button class="btn btn-primary" type="submit">Create</button>
-					<button class="btn btn-info" type="/product/index">Reset</button>
+				<div class="card-footer text-muted"  style="background: #696969;">
+					<button id="a" style='--clr:#1e9bff' class="btn btn-primary" type="submit"><span id="span">Create</span><i id="i"></i></button>
+					<button id="a"  style='--clr:#1e9bff' class="btn btn-info" type="/product/index"><span id="span">Reset</span><i id="i"></i></button>
 				</div>
 			</div>
 			</form>

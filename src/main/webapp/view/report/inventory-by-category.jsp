@@ -24,7 +24,7 @@
 		</head>
 
 		<body>
-			<main class="container-fluid">
+			<main class="container-fluid  container col-10">
 				<jsp:include page="_header.jsp" />
 
 				<jsp:include page="_bang.jsp" />
