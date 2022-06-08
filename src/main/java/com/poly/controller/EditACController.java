@@ -13,6 +13,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -30,6 +31,12 @@ AccountDAO dao;
 ParamService paramService;
 @Autowired
 ServletContext app;
+
+	@RequestMapping("/createAccountt")
+	public String createe() {
+		return "/account/RegisterAccount";
+	}
+
 
 //hàm 1
 	@RequestMapping("/editac/index")
