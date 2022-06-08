@@ -31,6 +31,7 @@
                 })
             </script>
             <link rel="stylesheet" type="text/css" href="/css/table.css">
+              <link rel="stylesheet" type="text/css" href="/css/button.css">
         </head>
 
         <body>
