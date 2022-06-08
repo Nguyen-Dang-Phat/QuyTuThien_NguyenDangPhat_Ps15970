@@ -289,7 +289,7 @@ img {
 								<div class="preview col-md-6">
 									<div class="preview-pic tab-content">
 										<div class="tab-pane active" id="pic-1">
-											<img style="height: 600px; width: 800px"
+											<img style="position: relative;max-height: 800px;max-width: 550px;left: 5cm;margin-top:-25px"
 												src="/images/${item.image}" />
 										</div>
 									</div>

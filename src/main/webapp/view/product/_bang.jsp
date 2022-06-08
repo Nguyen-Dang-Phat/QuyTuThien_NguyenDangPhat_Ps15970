@@ -1,7 +1,11 @@
 <%@ page pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
 
-<table class="table table-stripe" style="text-align: center;">
+<table class="content-table col-12" style="text-align: center;">
+<style>
+	
+</style>
+<thead>
 	<tr>
 		<th scope="col">Product ID</th>
 		<th scope="col">Product name</th>
@@ -10,6 +14,8 @@
 		<th scope="col">Category</th>
 		<th>&nbsp;</th>
 	</tr>
+	</thead>
+	<tbody>
 	<c:forEach var="item" items="${items}">
 		<tr>
 			<td class="align-middle">${item.id}</td>
@@ -23,4 +29,5 @@
 			</td>
 		</tr>
 	</c:forEach>
+	</tbody>
 </table>
