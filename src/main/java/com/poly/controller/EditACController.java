@@ -27,11 +27,6 @@ import com.poly.service.ParamService;
 public class EditACController {
 @Autowired
 AccountDAO dao;
-@Autowired
-ParamService paramService;
-@Autowired
-ServletContext app;
-
 
 //hàm 1
 	@RequestMapping("/editac/index")
@@ -56,14 +51,8 @@ ServletContext app;
 
 	// hàm 3
 	@RequestMapping("/editac/create")
-	public String create(@ModelAttribute("item") Account ac, BindingResult result, Model
-			model ,@RequestParam("photo") MultipartFile multipartFile) throws IOException {
-		String filename = StringUtils.cleanPath(multipartFile.getOriginalFilename());
-		String uploadString = "/webapp/images";
-		ac.setPhoto(filename);
-		dao.save(ac);
-		paramService.save(multipartFile, uploadString);
-		model.addAttribute("item",new Account());
+	public String create(Account item) {
+		dao.save(item);
 		return "redirect:/editac/index";
 	}
 
@@ -73,7 +62,7 @@ ServletContext app;
 		dao.save(item);
 		return "redirect:/editac/edit/" + item.getUsername();
 	}
-	
+
 	// hàm 5
 	@RequestMapping("/editac/delete/{username}")
 	public String delete(@PathVariable("username") String username) {
@@ -82,3 +71,4 @@ ServletContext app;
 	}
 	
 }
+

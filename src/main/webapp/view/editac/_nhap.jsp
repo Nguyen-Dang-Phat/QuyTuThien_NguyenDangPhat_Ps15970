@@ -1,7 +1,7 @@
 <%@ page pageEncoding="utf-8" %>
 	<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
-		<form:form action="/editac/index" modelAttribute="item">
+		<form:form action="/editac/index" modelAttribute="item" >
 			<div class="card">
 				<div class="card-body">
 					<div class="row">
@@ -51,5 +51,4 @@
 					<button id="a"  style='--clr:#1e9bff' formaction="/editac/index"><span id="span">Reset</span><i id="i"></i></button>
 				</div>
 			</div>
-			</form>
 		</form:form>
