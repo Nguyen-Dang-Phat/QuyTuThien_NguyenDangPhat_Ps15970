@@ -26,6 +26,8 @@
 								<li class="nav-item"><a class="nav-link"
 									href="/mailer/mailer" tabindex="-1" aria-disabled="true">Liên
 										hệ</a></li>
+										<li class="nav-item"><a class="nav-link" href="#dc"
+									tabindex="-1" aria-disabled="true"><jsp:include page="/common/time.jsp"/></a></li>
 							</ul>
 							<form class="d-flex">
 								<form action="/home/index">
