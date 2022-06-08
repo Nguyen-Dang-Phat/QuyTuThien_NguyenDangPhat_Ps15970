@@ -74,8 +74,6 @@ ServletContext app;
 		return "redirect:/editac/edit/" + item.getUsername();
 	}
 	
-
-
 	// hàm 5
 	@RequestMapping("/editac/delete/{username}")
 	public String delete(@PathVariable("username") String username) {
