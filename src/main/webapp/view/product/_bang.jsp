@@ -2,9 +2,6 @@
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
 
 <table class="content-table col-12" style="text-align: center;">
-<style>
-	
-</style>
 <thead>
 	<tr>
 		<th scope="col">Product ID</th>
