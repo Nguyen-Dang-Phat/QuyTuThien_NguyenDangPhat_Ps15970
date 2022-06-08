@@ -67,15 +67,28 @@
 			<div class="container wow bounceInRight" data-wow-duration="1.25s">
 				<h3 class="h3">Sản phẩm tiêu biểu</h3>
 				<p>Số trang hiện tại: ${page.number+1}</p>
-				<form action="/loaihang">
-					<select name="loaihang" style="width: 200px;" class="form-control">
-						<option value="ao">Áo</option>
-						<option value="quan">Quần</option>
-						<option value="giay">Giày</option>
-						<option value="aokhoac"> Áo khoác </option>
-					</select>
-					<br>
-				<button type="submit" class="btn btn-primary">Phân Loại</button>
+				<ul class="nav">
+					<li class="nav-item">
+					    <a class="nav-link" href="/loaihang/aothun"> <img src="../images/aothunicon.jpg" alt="" style=height:70px ;"> </a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="/loaihang/aokhoac"> <img src="../images/aokhoac.jpg" alt="" style=height:70px ;"></a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="/loaihang/quan"><img src="../images/8.jpg" alt="" style=height:70px ;"></a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="/loaihang/giay"><img src="../images/giayicon.jpg" alt="" style=height:70px ;"></a>
+					</li>
+				  </ul>
+				  <p>Phân loại sản phẩn theo giá tiền</p>
+				  <form action="/giatien" >
+						<input type="checkbox" name="max" value="${30000.0 }">300000 VNĐ &ensp;
+						<input type="checkbox" name="max" value="${50000.0 }">50000.0 VNĐ &ensp;
+						<input type="checkbox" name="max" value="${80000.0 }">80000.0 VNĐ &ensp;
+						<input type="checkbox" name="max" value="${100000.0 }">100000.0 VNĐ
+						<br> <br>
+						<button class="btn btn-primary" type="submit"> <i class="fa fa-search" aria-hidden="true"></i> Lọc</button>
 				</form>
 				<div class="row">
 					<c:forEach var="item" items="${page.content}">

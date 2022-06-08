@@ -12,9 +12,10 @@ import com.poly.entity.*;
 
 public interface ProductDAO extends JpaRepository<Product, Integer>{
 		
-	//lab6.1
+	//lab6.1 truy vấn theo giá của sp
 	@Query("SELECT o FROM Product o WHERE o.price BETWEEN ?1 AND ?2")
-	List<Product> findByPrice(double minPrice, double maxPrice);
+	Page<Product> findByPrice(double minPrice, double maxPrice,Pageable pageable);
+	
 	//lab6.4
 	List<Product> findByPriceBetween(double minPrice, double maxPrice);
 	

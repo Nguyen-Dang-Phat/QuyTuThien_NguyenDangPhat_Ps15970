@@ -82,7 +82,6 @@ public class ShoppingCartController {
 		return "/home/xemchitiet";
 	}
 	
-
 	@RequestMapping("/cart/checkout")
 	public String checkout() {
 		// lấy username để login

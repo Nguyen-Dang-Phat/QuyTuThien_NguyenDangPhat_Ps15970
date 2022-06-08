@@ -30,7 +30,7 @@
 							<form class="d-flex">
 								<form action="/home/index">
 									<input class="form-control me-2" type="search"
-										placeholder=" Search" aria-label="Search"
+										placeholder="Bạn tìm gì..." aria-label="Search"
 										name="keywords"> 
 										<button type="submit" style="width: 150px;" class="form-control"> <i class="fa fa-search" aria-hidden="true"></i> </button>
 								</form>

@@ -6,7 +6,7 @@
         <div class="row">
             <div class="heading">
                 <h1 class="main-heading wow lightSpeedIn" data-wow-duration="1s">TIN
-                    Tức</h1>
+                    TỨC</h1>
             </div>
             <div class="col-sm-8 wow bounceInLeft" data-wow-duration="3s">
                 <img
