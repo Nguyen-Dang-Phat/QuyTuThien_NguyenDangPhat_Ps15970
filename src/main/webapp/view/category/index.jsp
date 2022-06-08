@@ -38,6 +38,19 @@
 	})
 </script>
 <link rel="stylesheet" type="text/css" href="css/button.css">
+<style>
+	*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+	body{
+		background-image: url(/images/backgroupadmin.jpg);
+		justify-content: center;
+    align-items: center;
+	}
+</style>
 </head>
 
 <body>
