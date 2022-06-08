@@ -26,6 +26,21 @@
 	crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="/css/table.css">
 <link rel="stylesheet" type="text/css" href="/css/button.css">
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background-size: cover;
+	background-repeat: repeat;
+	background-image:
+		url("https://scr.vn/wp-content/uploads/2020/07/white-background-%C4%91%E1%BA%B9p-1024x640.jpg");
+}
+</style>
 </head>
 
 <body>
