@@ -39,6 +39,21 @@
 </script>
    <link rel="stylesheet" type="text/css" href="/css/table.css">
              <link rel="stylesheet" type="text/css" href="/css/button.css">
+
+<link rel="stylesheet" type="text/css" href="css/button.css">
+<style>
+	*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+	body{
+	min-height:100vh;
+		background-image: url(/images/backgroupadmin.jpg);
+		background-size: cover;
+	background-position: center;
+	}
+</style>
 </head>
 
 <body>
