@@ -1,13 +1,21 @@
 package com.poly.controller;
 
+import java.io.File;
+import java.io.IOException;
+
+import javax.servlet.ServletContext;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.poly.dao.AccountDAO;
 import com.poly.entity.Account;
@@ -20,6 +28,10 @@ public class AccountController {
 	AccountDAO dao;
 	@Autowired
 	SessionService session;
+	@Autowired
+	ParamService paramService;
+	@Autowired
+	ServletContext app;
 
 	@GetMapping("/account/login")
 	public String login() {
@@ -71,5 +83,45 @@ public class AccountController {
 			return "redirect:/home/index";
 		}
 	}
-
+	@RequestMapping("/accountuser/{username}")
+	public String accountuser(Model model,@PathVariable("username") String username) {
+		Account ac = dao.getOne(username);
+		if(ac.isAdmin()) {
+			session.set("username", ac.getUsername());
+			session.set("password", ac.getPassword());
+			session.set("fullname", ac.getFullname());
+			session.set("email", ac.getEmail());
+			session.set("photo", ac.getPhoto());
+			model.addAttribute("message", session);
+			return "/account/accountuser";
+		}
+		else {
+			session.set("username", ac.getUsername());
+			session.set("password", ac.getPassword());
+			session.set("fullname", ac.getFullname());
+			session.set("email", ac.getEmail());
+			session.set("photo", ac.getPhoto());
+			model.addAttribute("message", session);
+			return "/account/accountuser";
+		}
+	}
+	
+	// sửa thông tin cá nhân
+		@RequestMapping("thongtincanhan")
+		public String thongtincanhan( Model model ,
+				@RequestParam("username") String username, @RequestParam("password") String passsword,
+				@RequestParam("email") String email, @RequestParam("fullname") String fullname) throws IOException {
+				Account ac = dao.getOne(username);
+				ac.setEmail(email);
+				ac.setFullname(fullname);
+				ac.setPassword(passsword);
+				dao.save(ac);
+				session.set("username", ac.getUsername());
+				session.set("password", ac.getPassword());
+				session.set("fullname", ac.getFullname());
+				session.set("email", ac.getEmail());
+				session.set("photo", ac.getPhoto());
+				model.addAttribute("message", session);
+				return "/account/accountuser";
+		}
 }
