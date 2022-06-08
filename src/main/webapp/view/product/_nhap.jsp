@@ -41,7 +41,7 @@
 				</div>
 				<div class="card-footer text-muted"  style="background: #696969;position: relative;">
 					<button id="a" style='--clr:#1e9bff' type="submit"><span id="span">Create</span><i id="i"></i></button>
-					<button id="a"  style='--clr:#40E0D0' type="/product/index"><span id="span">Reset</span><i id="i"></i></button>
+					<button id="a"  style='--clr:#40E0D0' formaction="/product/index" formmethod="get"><span id="span">Reset</span><i id="i"></i></button>
 				</div>
 			</div>
 			</form>
