@@ -1,8 +1,8 @@
 <%@ page pageEncoding="utf-8" %>
 	<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
-		<form:form action="/editac/index" modelAttribute="item" enctype="multipart/form-data">
-			<form><style>
+		
+<style>
 #a{
     position: relative;
     background-color: #444;
@@ -70,6 +70,8 @@
     
 }
 </style>
+		<form:form action="/editac/index" modelAttribute="item" enctype="multipart/form-data">
+			<form>
 			<div class="card">
 				<div class="card-body">
 					<div class="row">
@@ -91,27 +93,26 @@
 							</div>
 							<div class="form-group">
 								<label for="videotitle">Password</label>
-								<form:input class="form-control" path="password" placeholder="Category Name?" />
+								<form:input class="form-control" path="password" placeholder="Category Password?" />
 								<small id="videotHid" class="form-text text-muted"></small>
 							</div>
 							<div class="form-group">
 								<label for="videotitle">Full name</label>
-								<form:input class="form-control" path="fullname" placeholder="Category Name?" />
+								<form:input class="form-control" path="fullname" placeholder="Category Fullname?" />
 								<small id="videotHid" class="form-text text-muted"></small>
 							</div>
 							<div class="form-group">
 								<label for="videotitle">Email</label>
-								<form:input class="form-control" path="email" placeholder="Category Name?" />
+								<form:input class="form-control" path="email" placeholder="Category Email?" />
 								<small id="videotHid" class="form-text text-muted"></small>
 							</div>
 							<div class="form-group">
 								<label for="videotitle">Hinh</label>
-								<form:input class="form-control" path="photo" placeholder="Category Name?" />
+								<form:input class="form-control" path="photo" placeholder="Category Photto?" />
 								<small id="videotHid" class="form-text text-muted"></small>
 							</div>
 						</div>
 					</div>
-
 				</div>
 				<div class="card-footer text-muted text-center" style="background: #696969;">
 					<button id="a" style='--clr:#1e9bff' class="btn btn-primary" formaction="/editac/create"><span id="span">Create</span><i id="i"></i></button>

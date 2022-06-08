@@ -3,7 +3,7 @@
 
 	<form:form action="/product/SaveOrUpdate" modelAttribute="item" method="post" enctype="multipart/form-data">
 			<form>
-			<style>
+<style>
 #a{
     position: relative;
     background-color: #444;
@@ -109,7 +109,7 @@
 				</div>
 				<div class="card-footer text-muted"  style="background: #696969;">
 					<button id="a" style='--clr:#1e9bff' class="btn btn-primary" type="submit"><span id="span">Create</span><i id="i"></i></button>
-					<button id="a"  style='--clr:#1e9bff' class="btn btn-info" type="/product/index"><span id="span">Reset</span><i id="i"></i></button>
+					<button id="a"  style='--clr:#1e9bff' class="btn btn-info" formaction="/product/index" formmethod="get"><span id="span">Reset</span><i id="i"></i></button>
 				</div>
 			</div>
 			</form>
