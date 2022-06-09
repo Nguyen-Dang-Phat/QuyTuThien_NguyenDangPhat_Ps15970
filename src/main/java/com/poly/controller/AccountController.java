@@ -37,7 +37,7 @@ public class AccountController {
 	public String login() {
 		return "account/login";
 	}
-
+	
 	@PostMapping("/account/login")
 	public String login(Model model, @RequestParam("username") String username,
 			@RequestParam("password") String password) {

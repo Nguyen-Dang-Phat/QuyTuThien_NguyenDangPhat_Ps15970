@@ -275,6 +275,11 @@ img {
 									src="https://img.icons8.com/bubbles/2x/buy.png" alt=""
 									style="width: 70px; height: 70px; margin-top: 5px;"> </a>
 							</form>
+							<form class="d-flex">
+								<a href="/account/login"><img
+									src="https://laodongnhatban.com.vn/images/2017/09/01/2-serv.png" alt=""
+									style="width: 60px; height: 60px; margin-top: 4px;"> </a>
+							</form>
 						</div>
 					</div>
 			</nav>
