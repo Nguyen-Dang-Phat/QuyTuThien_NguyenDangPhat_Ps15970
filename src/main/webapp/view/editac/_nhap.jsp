@@ -7,8 +7,8 @@
 					<div class="row">
 						<div class="col-3">
 							<div class="p-3">
-								<img src="/webapp/images/${item.photo}"
-									alt="" style="width: 260px" height="360px" >
+								<img src="/images/${item.photo}"
+									alt="" style="width: 320px" height="400px" >
 									<div class="form-group">
 									<input type="file" name="photo" class="form-control-file"
 										id="image" onchange="chooseFile(this)" />
@@ -23,22 +23,22 @@
 							</div>
 							<div class="form-group">
 								<label for="videotitle">Password</label>
-								<form:input class="form-control" path="password" placeholder="Category Name?" />
+								<form:input class="form-control" path="password" type="password" placeholder="Category password?" />
 								<small id="videotHid" class="form-text text-muted"></small>
 							</div>
 							<div class="form-group">
 								<label for="videotitle">Full name</label>
-								<form:input class="form-control" path="fullname" placeholder="Category Name?" />
+								<form:input class="form-control" path="fullname" placeholder="Category fullname?" />
 								<small id="videotHid" class="form-text text-muted"></small>
 							</div>
 							<div class="form-group">
 								<label for="videotitle">Email</label>
-								<form:input class="form-control" path="email" placeholder="Category Name?" />
+								<form:input class="form-control" path="email" placeholder="Category email?" />
 								<small id="videotHid" class="form-text text-muted"></small>
 							</div>
 							<div class="form-group">
-								<label for="videotitle">Hinh</label>
-								<form:input class="form-control" path="photo" placeholder="Category Name?" />
+								<label for="videotitle">Photo</label>
+								<form:input class="form-control" path="photo" placeholder="Category photo?" />
 								<small id="videotHid" class="form-text text-muted"></small>
 							</div>
 						</div>
