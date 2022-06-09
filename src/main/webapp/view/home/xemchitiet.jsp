@@ -264,7 +264,7 @@ img {
 								<a href="/logout/${username}">${username}</a>
 							</h5>
 							<form class="d-flex">
-								<a href="/account/login"><img
+								<a href="/accountuser/${username}"><img
 									src="https://img.icons8.com/bubbles/2x/user.png" alt=""
 									style="width: 70px; height: 70px; margin-top: 5px;"> </a>
 							</form>
