@@ -56,9 +56,12 @@
 		<jsp:include page="header.jsp"/>
 		<main>
 			<!--Hình header-->
-			<img src="/home/1.jpg" alt="" style="margin-top: 90px;">
+			<img src="/home/1.jpg" alt="" style="margin-top: 90px;"><br>&ensp;
 			<!--end header-->
-
+			<div class="heading wow lightSpeedIn pt-5" data-wow-duration="1.25s">
+			<h1 style="left 20px;position: flex;">TIME</h1>
+				<jsp:include page="/common/time.jsp"></jsp:include>
+				</div>
 			<!--Sản phẩm-->
 			<div class="heading wow lightSpeedIn pt-5" data-wow-duration="1.25s"
 				id="sp">
@@ -199,9 +202,9 @@
           let s = new Date().getSeconds();
           let am = h >= 12 ? "PM" : "AM";
             //
-            if(h > 12){
+         /*   if(h > 12){
                 h = h - 12;
-            }
+            }*/
             //
             h = (h < 10)? "0" + h : h;
             m = (m < 10)? "0" + m : m;

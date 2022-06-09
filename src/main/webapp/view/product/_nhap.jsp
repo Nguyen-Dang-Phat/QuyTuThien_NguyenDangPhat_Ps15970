@@ -11,7 +11,7 @@
 							<div class="p-3">
 								<img src="/images/${item.image}" alt="" style="width: 250px; height: 2	50px;">
 								<div class="form-group">
-									<input type="file" name="image" class="form-control-file"
+									<input style="margin-top: 10px ;background: #009879;border-radius: 2px;" type="file" name="image" class="form-control-file"
 										id="image" onchange="chooseFile(this)" />
 
 								</div>

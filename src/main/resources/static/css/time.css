@@ -4,33 +4,34 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-}
-#container{
+}#container{
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 2vh;
+    padding: 20px 0px 20px 0px;
+    top:25px;
 }
 
 #time{
     display: flex;
-    gap: 15px;
-    font-size: 5px;
+    gap: 40px;
+    font-size: 30px;
     color: #ffff;
 }
 #time .circle{
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 150px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 #time .circle svg{
     position: relative;
-    width: 10px;
-    height: 10px;
+    width: 150px;
+    height: 150px;
     transform: rotate(270deg);
 }
 #time .circle svg circle{
@@ -38,7 +39,7 @@
     height: 100%;
     fill: transparent;
     stroke: #191919;
-    stroke-width: 3;
+    stroke-width: 4;
     transform: translate(5px, 5px);
 }
 #time .circle svg circle:nth-child(2){
@@ -50,12 +51,12 @@
     position: absolute;
     text-align: center;
     font-weight: 500;
-    font-size: 0.5cm;
+    font-size: 1.5em;
 }
 #time .ap{
     position: relative;
-    font: 1cm;
-    transform: translateX(-10px);
+    font: 1em;
+    transform: translateX(-20px);
 }
 .dots{
     position: absolute;
@@ -69,10 +70,10 @@
     content: '';
     position: absolute;
     top:-3px;
-    width: 5px;
-    height: 5px;
+    width: 15px;
+    height: 15px;
     background-color: var(--clr);
     border-radius: 50%;
-    box-shadow: 0 0 2px var(--clr),
-    0 0 6px var(--clr);
+    box-shadow: 0 0 20px var(--clr),
+    0 0 60px var(--clr);
 }

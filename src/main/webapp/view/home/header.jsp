@@ -25,9 +25,7 @@
 									tabindex="-1" aria-disabled="true">Địa chỉ</a></li>
 								<li class="nav-item"><a class="nav-link"
 									href="/mailer/mailer" tabindex="-1" aria-disabled="true">Liên
-										hệ</a></li>
-										<li class="nav-item"><a class="nav-link" href="#dc"
-									tabindex="-1" aria-disabled="true"><jsp:include page="/common/time.jsp"/></a></li>
+										hệ</a></li>									
 							</ul>
 							<form class="d-flex">
 								<form action="/home/index">
@@ -54,7 +52,7 @@
 							<form class="d-flex">
 								<a href="/account/login"><img
 									src="https://laodongnhatban.com.vn/images/2017/09/01/2-serv.png" alt=""
-									style="width: 60px; height: 60px; margin-top: 30px;"> </a>
+									style="width: 56px; height: 56px; margin-top: 30px;"> </a>
 							</form>
 						</div>
 					</div>

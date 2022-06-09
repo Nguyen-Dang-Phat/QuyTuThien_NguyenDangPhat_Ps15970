@@ -34,7 +34,7 @@
 					<button id="a" style='--clr:#1e9bff' formaction="/category/create"><span id="span">Create</span><i id="i"></i></button>
 					<button id="a"  style='--clr:#FFD700' formaction="/category/update"><span id="span">Update</span><i id="i"></i></button>
 					<button id="a"  style='--clr:#FF0000' formaction="/category/delete/${item.id}"><span id="span">Delete</span><i id="i"></i></button>
-					<button id="a"  style='--clr:#1e9bff' formaction="/category/index"><span id="span">Reset</span><i id="i"></i></button>
+					<button id="a"  style='--clr:#40E0D0' formaction="/category/index"><span id="span">Reset</span><i id="i"></i></button>
 				</div>
 			</div>
 			</form>

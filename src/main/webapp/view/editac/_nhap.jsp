@@ -10,7 +10,8 @@
 								<img src="/webapp/images/${item.photo}"
 									alt="" style="width: 260px" height="360px" >
 									<div class="form-group">
-									<input type="file" name="photo" class="form-control-file"
+									<input style="margin-top: 10px ;background: #009879;border-radius: 2px;"
+									 type="file" name="photo" class="form-control-file "
 										id="image" onchange="chooseFile(this)" />
 								</div>
 							</div>
@@ -48,7 +49,7 @@
 					<button id="a" style='--clr:#1e9bff' formaction="/editac/create"><span id="span">Create</span><i id="i"></i></button>
 					<button id="a"  style='--clr:#FFD700' formaction="/editac/update"><span id="span">Update</span><i id="i"></i></button>
 					<button id="a"  style='--clr:#FF0000' formaction="/editac/delete/${item.username}"><span id="span">Delete</span><i id="i"></i></button>
-					<button id="a"  style='--clr:#1e9bff' formaction="/editac/index"><span id="span">Reset</span><i id="i"></i></button>
+					<button id="a"  style='--clr:#40E0D0' formaction="/editac/index"><span id="span">Reset</span><i id="i"></i></button>
 				</div>
 			</div>
 		</form:form>
