@@ -270,13 +270,12 @@ background-position
 							</div>
 						</div>
 					</div>
-
 					<div class="col-12 col-md-3 mb-3">
 						<div class="card mb-3">
 							<div class="card-body">
 								<div class="px-xl-3">
 									<button class="button-85" role="button">
-										<i class="fa fa-sign-out"></i> <a href="/account/login">Đăng
+										<i class="fa fa-sign-out"></i> <a href="/home/index">Đăng
 											Xuất</a>
 									</button>
 								</div>

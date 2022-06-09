@@ -217,7 +217,7 @@
           ampm.innerHTML = am;
 
           //hh
-          hh.style.strokeDashoffset = 440 - (440 * h) / 12;
+          hh.style.strokeDashoffset = 440 - (440 * h) / 24;
             //mm
           mm.style.strokeDashoffset = 440 - (440 * m) / 60;
             //ss
