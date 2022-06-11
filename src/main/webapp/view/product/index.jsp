@@ -36,6 +36,7 @@
 </script>
 <link rel="stylesheet" type="text/css" href="/css/table.css">
 <link rel="stylesheet" type="text/css" href="/css/button.css">
+<link rel="stylesheet" type="text/css" href="/css/hieuUng.css">
 <style>
 * {
 	margin: 0;
@@ -45,19 +46,17 @@
 
 body {
 	min-height: 100vh;
-	background-size: cover;
-	background-repeat: repeat;
-	background-image:
-		url("https://scr.vn/wp-content/uploads/2020/07/white-background-%C4%91%E1%BA%B9p-1024x640.jpg");
 }
 </style>
 </head>
 
 <body>
+<div id="container">
+<jsp:include page="/common/hieuUng.jsp"/>
 	<main class="container-fluid container col-10">
 		<jsp:include page="_header.jsp" />
 		<section class="row">
-			<div class="col mt-4">
+			<div class="col mt-2">
 				<ul class="nav nav-tabs" id="myTab" role="tablist">
 					<li class="nav-item" role="presentation"><a
 						class="nav-link active" id="videoediting-tab" data-toggle="tab"
@@ -82,11 +81,13 @@ body {
 
 					</div>
 				</div>
+				</div>
 		</section>
 
 		<footer class="row"> </footer>
 
 	</main>
+	</div>
 </body>
 
 </html>

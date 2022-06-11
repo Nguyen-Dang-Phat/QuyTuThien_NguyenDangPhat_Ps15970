@@ -8,9 +8,9 @@
 						<div class="col-3">
 							<div class="p-3">
 								<img src="/images/${item.photo}"
-									alt="" style="width: 320px" height="400px" >
+									alt="" style="width: 280px" height="380px" >
 									<div class="form-group">
-									<input style="margin-top: 10px ;background: #009879;border-radius: 2px;"
+									<input style="margin-top: 5px ;background: #009879;border-radius: 2px;"
 									 type="file" name="photo" class="form-control-file "
 										id="image" onchange="chooseFile(this)" />
 								</div>
