@@ -1422,6 +1422,11 @@
 												<a href="#pablo" class="link">Tạo tài khoản</a>
 											</h6>
 										</div>
+										<div class="pull-center">
+											<h6>
+												<a href="/quenmk" class="link">Quên Mật Khẩu ?</a>
+											</h6>
+										</div>
 
 								</form>
 							</div>
