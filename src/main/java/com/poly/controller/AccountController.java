@@ -143,7 +143,7 @@ public class AccountController {
 		if (!dao.existsById(username)) {
 			model.addAttribute("message", "Tài khoản này không tồn tại!");
 		} else {
-			Account ac = dao.getOne(username);
+			Account ac = dao.getOne(username); 
 			String pass = ac.getPassword();
 			String email = ac.getEmail();
 			try {
