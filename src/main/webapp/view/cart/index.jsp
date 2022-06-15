@@ -108,8 +108,8 @@
 					<td><a class="btn btn-success" href="/cart/clear">Clear Cart</a></td>
 					<td><a class="btn btn-success" href="/home/index">Add More</a></td>
 					<td><a class="btn btn-success" href="/cart/checkout">Ckeck Out</a></td>
+					<td><a class="btn btn-success" href="/cart/thanhtoan">Thanh toán</a></td>
 				</center>
-
 			</main>
 			<jsp:include page="footer.jsp"/>
 			</div>

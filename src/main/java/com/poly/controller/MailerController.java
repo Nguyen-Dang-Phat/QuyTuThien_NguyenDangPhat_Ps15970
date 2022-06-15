@@ -34,6 +34,4 @@ public class MailerController {
 		model.addAttribute("mail", mailinfo);
 		return "mail/send";
 	}
-	
-
 }

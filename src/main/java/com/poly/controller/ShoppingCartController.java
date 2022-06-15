@@ -38,6 +38,7 @@ public class ShoppingCartController {
 	OrderDAO orderDao;
 	@Autowired
 	ProductDAO productDao;
+	
 
 	// 2. xem giỏ hàng
 	@RequestMapping("/cart/view")
@@ -46,8 +47,6 @@ public class ShoppingCartController {
 		model.addAttribute("cart", cart);
 		return "cart/index"; // 3. view lên trang giỏ hảng index
 	}
-
-	///////////////////////////////////
 
 	@RequestMapping("/cart/add/{id}")
 	public String add(@PathVariable("id") Integer id) {
@@ -82,6 +81,7 @@ public class ShoppingCartController {
 		return "/home/xemchitiet";
 	}
 	
+	/*
 	@RequestMapping("/cart/checkout")
 	public String checkout() {
 		// lấy username để login
@@ -115,5 +115,5 @@ public class ShoppingCartController {
 		}
 
 		return "redirect:/cart/view";
-	}
+	}*/
 }
