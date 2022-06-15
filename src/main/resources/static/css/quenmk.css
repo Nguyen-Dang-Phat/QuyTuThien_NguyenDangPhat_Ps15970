@@ -21,10 +21,10 @@ body {
 	width: 50%;
 	top: 25vh;
 	box-shadow: 0 0 20px #CCCCCC;
-	border-color: #CCCCCC;
+	border-color: #888888;
 }
 
 .card #cardh {
 	font-weight: 600;
-	font-size: 22px;
+	font-size: 18px;
 }

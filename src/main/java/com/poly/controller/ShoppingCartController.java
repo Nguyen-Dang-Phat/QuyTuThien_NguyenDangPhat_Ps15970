@@ -36,8 +36,8 @@ public class ShoppingCartController {
 	AccountDAO accountDao;
 	@Autowired
 	OrderDAO orderDao;
-	@Autowired
-	ProductDAO productDao;
+//	@Autowired
+//	ProductDAO productDao;
 
 	// 2. xem giỏ hàng
 	@RequestMapping("/cart/view")
@@ -73,47 +73,47 @@ public class ShoppingCartController {
 		return "redirect:/cart/view";
 	}
 
-	// xem chi tiết
-	@RequestMapping("/cart/chitiet/{id}")
-	public String chitiet(@PathVariable("id") Integer id,
-			 Model model) {
-		List<Product> PR = productDao.product(id);
-		model.addAttribute("items",PR);
-		return "/home/xemchitiet";
-	}
-	
-	@RequestMapping("/cart/checkout")
-	public String checkout() {
-		// lấy username để login
-		String username = session.get("username");
-		if (username == null) {
-			return "redirect:/account/login";
-		}
-		Account currentAcc = null;
-		// nếu username khớp thì tt xử lí
-		if (accountDao.findById(username).isPresent()) {
-			currentAcc = accountDao.findById(username).get();
-			Order ord = new Order();
-			ord.setAccount(currentAcc);
-			ord.setCreateDate(new Date());
-			ord.setAddress("123");
-			List<OrderDetail> details = new ArrayList<>();
-			// duyệt tất cả sp có trong giỏ
-			for (Item item : cart.getItems()) {
-				OrderDetail od = new OrderDetail();
-				od.setOrder(ord);
-				productDao.findById(item.getId()).ifPresent(p -> {
-					od.setProduct(p);
-				});
-				od.setPrice(item.getPrice());
-				od.setQuantity(item.getQty());
-				details.add(od);
-			}
-			ord.setOrderDetails(details);
-			orderDao.save(ord);
-			cart.clear();
-		}
-
-		return "redirect:/cart/view";
-	}
+//	// xem chi tiết
+//	@RequestMapping("/cart/chitiet/{id}")
+//	public String chitiet(@PathVariable("id") Integer id,
+//			 Model model) {
+//		List<Product> PR = productDao.product(id);
+//		model.addAttribute("items",PR);
+//		return "/home/xemchitiet";
+//	}
+//	
+//	@RequestMapping("/cart/checkout")
+//	public String checkout() {
+//		// lấy username để login
+//		String username = session.get("username");
+//		if (username == null) {
+//			return "redirect:/account/login";
+//		}
+//		Account currentAcc = null;
+//		// nếu username khớp thì tt xử lí
+//		if (accountDao.findById(username).isPresent()) {
+//			currentAcc = accountDao.findById(username).get();
+//			Order ord = new Order();
+//			ord.setAccount(currentAcc);
+//			ord.setCreateDate(new Date());
+//			ord.setAddress("123");
+//			List<OrderDetail> details = new ArrayList<>();
+//			// duyệt tất cả sp có trong giỏ
+//			for (Item item : cart.getItems()) {
+//				OrderDetail od = new OrderDetail();
+//				od.setOrder(ord);
+//				productDao.findById(item.getId()).ifPresent(p -> {
+//					od.setProduct(p);
+//				});
+//				od.setPrice(item.getPrice());
+//				od.setQuantity(item.getQty());
+//				details.add(od);
+//			}
+//			ord.setOrderDetails(details);
+//			orderDao.save(ord);
+//			cart.clear();
+//		}
+//
+//		return "redirect:/cart/view";
+//	}
 }

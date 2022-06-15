@@ -157,4 +157,8 @@ public class AccountController {
 		}
 		return "/account/quenmk";
 	}
+	@RequestMapping("dangKi")
+	public String Dangki() {
+		return "/account/dangKi";
+	}
 }
