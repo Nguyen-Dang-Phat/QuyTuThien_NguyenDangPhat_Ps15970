@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.poly.dao.AccountDAO;
-import com.poly.dao.OrderDAO;
+
 import com.poly.entity.Account;
 import com.poly.service.MailerService;
 import com.poly.service.ParamService;
@@ -38,8 +38,7 @@ public class AccountController {
 	ServletContext app;
 	@Autowired
 	MailerService mailer;
-	@Autowired
-	OrderDAO daoo;
+
 
 	@GetMapping("/account/login")
 	public String login() {

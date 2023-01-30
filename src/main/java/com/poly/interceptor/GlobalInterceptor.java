@@ -8,12 +8,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.poly.dao.CategoryDAO;
+
 
 @Service
 public class GlobalInterceptor implements HandlerInterceptor{
-	@Autowired
-	CategoryDAO dao;
 	
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
@@ -21,10 +19,5 @@ public class GlobalInterceptor implements HandlerInterceptor{
 		request.setAttribute("uri", request.getRequestURI());
 		return true;
 	}
-	
-	@Override
-	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
-			ModelAndView modelAndView) throws Exception {
-		request.setAttribute("categories", dao.findAll());
-	}
+
 }

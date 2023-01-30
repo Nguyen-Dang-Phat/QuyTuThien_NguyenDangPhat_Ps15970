@@ -18,9 +18,10 @@
 body {
   font-family: 'open sans';
   overflow-x: hidden; }
-
+h1{
+text-align: center;}
 img {
-  max-width: 100%; }
+  max-width: 49%; }
 
 .preview {
   display: -webkit-box;
@@ -78,7 +79,9 @@ img {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; } }
-
+.product-lh{
+color: red;
+}
 .details {
   display: -webkit-box;
   display: -webkit-flex;
@@ -227,10 +230,10 @@ img {
 </head>
 <body>
 		<header>
-				<nav class="navbar navbar-expand-lg navbar-dark navbar-light"
-					style="background-color: black; height: 140px">
+							<nav class="navbar navbar-expand-lg navbar-dark navbar-light"
+					style="background-color:  rgb(255, 128, 192);">
 					<div class="container-fluid">
-						<a class="navbar-brand " href="/home/index">FPT POLYTECHNIC</a>
+						<a class="navbar-brand " href="/home/index">Quay lại</a>
 						<button class="navbar-toggler" type="button"
 							data-bs-toggle="collapse" data-bs-target="#navbarScroll"
 							aria-controls="navbarScroll" aria-expanded="false"
@@ -239,47 +242,8 @@ img {
 						</button>
 						<div class="collapse navbar-collapse" id="navbarScroll">
 							<ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
-								style="-bs-scroll-height: 100px;">
-								<li class="nav-item"><a class="nav-link active"
-									aria-current="page" href="#">Home</a></li>
-								<li class="nav-item"><a class="nav-link" href="#sp">Sản
-										phẩm</a></li>
-								<li class="nav-item"><a class="nav-link" href="#tt"
-									tabindex="-1" aria-disabled="true">Tin tức</a></li>
-								<li class="nav-item"><a class="nav-link" href="#dc"
-									tabindex="-1" aria-disabled="true">Địa chỉ</a></li>
-								<li class="nav-item"><a class="nav-link"
-									href="/mailer/mailer" tabindex="-1" aria-disabled="true">Liên
-										hệ</a></li>
+								style="-bs-scroll-height: 100px;">	
 							</ul>
-							<form class="d-flex">
-								<form action="/home/index">
-									<input class="form-control me-2" type="search"
-										placeholder=" Search" aria-label="Search"
-										name="keywords"> 
-										<button type="submit" style="width: 150px;" class="form-control"> <i class="fa fa-search" aria-hidden="true"></i> </button>
-								</form>
-							</form>
-							<h5 class="nav-link" style="color: red;">
-								<a href="/logout/${username}">${username}</a>
-							</h5>
-							<form class="d-flex">
-								<a href="/accountuser/${username}"><img
-									src="https://img.icons8.com/bubbles/2x/user.png" alt=""
-									style="width: 70px; height: 70px; margin-top: 5px;"> </a>
-							</form>
-
-
-							<form class="d-flex">
-								<a href="/cart/view"><img
-									src="https://img.icons8.com/bubbles/2x/buy.png" alt=""
-									style="width: 70px; height: 70px; margin-top: 5px;"> </a>
-							</form>
-							<form class="d-flex">
-								<a href="/account/login"><img
-									src="https://laodongnhatban.com.vn/images/2017/09/01/2-serv.png" alt=""
-									style="width: 60px; height: 60px; margin-top: 4px;"> </a>
-							</form>
 						</div>
 					</div>
 			</nav>
@@ -301,40 +265,12 @@ img {
 								</div>
 								<div class="details col-md-6">
 									<h3 class="product-title">${item.name}</h3>
-									<div class="rating">
-										<div class="stars">
-											<span class="fa fa-star checked"></span> <span
-												class="fa fa-star checked"></span> <span
-												class="fa fa-star checked"></span> <span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-										</div>
-										<span class="review-no">41 reviews</span>
-									</div>
-									<p class="product-description">${item.describe }</p>
+									<h4 class="product-lh" >${item.loaihang }</h4>
 									<h4 class="price">
-										current price: <span>${item.price} VNĐ</span>
+										Đã được quyên góp : <span> ${item.price} VNĐ</span>
 									</h4>
-									<p class="vote">
-										<strong>91%</strong> of buyers enjoyed this product! <strong>(87
-											votes)</strong>
-									</p>
-									<h5 class="sizes">
-										sizes: <span class="size" data-toggle="tooltip" title="small">s</span>
-										<span class="size" data-toggle="tooltip" title="medium">m</span>
-										<span class="size" data-toggle="tooltip" title="large">l</span>
-										<span class="size" data-toggle="tooltip" title="xtra large">xl</span>
-									</h5>
-									<h5 class="colors">
-										colors: <span class="color orange not-available"
-											data-toggle="tooltip" title="Not In store"></span> <span
-											class="color green"></span> <span class="color blue"></span>
-									</h5>
 									<div class="action">
-										<button class="btn btn-primary" type="submit"> <i class="fa fa-cart-arrow-down" aria-hidden="true"></i> add
-											to cart</button>
-										<button class="like btn btn-default" type="button">
-											<span class="fa fa-heart"></span>
-										</button>
+										<button class="btn btn-primary"> <i class="fa fa-heart" ></i> Quyên góp</button>
 									</div>
 								</div>
 							</div>
@@ -343,53 +279,35 @@ img {
 				</form>
 			</c:forEach>
 		</main>
-		<jsp:include page="footer.jsp"/>
-	<script>
-		var header = document.getElementById('header');
-		var mobileMenu = document.getElementById('mobile-menu');
-		var headerHeight = header.clientHeight;
-		//  đsong mở mobile menu
-		mobileMenu.onclick = function() {
-			var isClosed = header.clientHeight === headerHeight;
-			if (isClosed) {
-				header.style.height = 'auto';
-			} else {
-				header.style.height = null;
-			}
-		}
-		// tự động đóng khi chọn menu
-		var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
-		for (var i = 0; i < menuItems.length; i++) {
-			var menuItem = menuItems[i];
-			menuItem.onclick = function(event) {
+		<c:forEach var="item" items="${items}">
+		<h1>TIN TỨC</h1>
+	</div>
 
-				var isParentMenu = this.nextElementSibling
-						&& this.nextElementSibling.classList.contains('subnav');
-				if (isParentMenu) {
-					event.preventDefault();
-				} else {
-					header.style.height = null;
+	<div>
+		<div class="head">
+			<h2 class="text-block wow bounceInDown center">Câu
+				chuyện</h2>
+		</div>
+			<p class="product-description">${item.describe }</p>
+		<!-- End tin tức-->
 
-				}
+    <!--End Äá»a chá»-->
+    <div class="bottom section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="copyright">
+                        <h6>
+                            Â© <span>2021</span> <a href="#" class="transition">FPT
+                                POLYTEACHNIC </a> Chương trình từ thiện.
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	</div>
+	</c:forEach>
 
-			}
-		}
-	</script>
-	<script>
-		wow = new WOW({
-			animateClass : 'animated',
-			offset : 100,
-			callback : function(box) {
-				console.log("WOW: animating <" + box.tagName.toLowerCase()
-						+ ">")
-			}
-		});
-		wow.init();
-		document.getElementById('moar').onclick = function() {
-			var section = document.createElement('section');
-			section.className = 'section--purple wow fadeInDown';
-			this.parentNode.insertBefore(section, this);
-		};
-	</script>
 </body>
 </html>
